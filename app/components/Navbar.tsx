@@ -49,6 +49,13 @@ export default function Navbar() {
           </Link>
 
           <Link
+            href="/dashboard"
+            className="hover:text-orange-500 transition-colors"
+          >
+            {language === "ar" ? "لوحة التحكم" : "Dashboard"}
+          </Link>
+
+          <Link
             href="/contact-us"
             className="hover:text-orange-500 transition-colors"
           >
@@ -143,6 +150,13 @@ export default function Navbar() {
               className="py-2 hover:text-orange-500 transition-colors"
             >
               {dict.nav.about}
+            </Link>
+            <Link
+              href="/dashboard"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2 hover:text-orange-500 transition-colors"
+            >
+              {language === "ar" ? "لوحة التحكم" : "Dashboard"}
             </Link>
             <Link
               href="/contact-us"
